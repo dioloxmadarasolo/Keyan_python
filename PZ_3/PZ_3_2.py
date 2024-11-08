@@ -16,4 +16,3 @@ if null == 1:
     print("Ваше число ноль!")
 else:
     print(f"{a} Ваше число: {even}, {positive}")
-
