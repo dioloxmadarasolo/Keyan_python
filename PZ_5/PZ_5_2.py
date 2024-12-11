@@ -22,9 +22,11 @@ def SortDec3(A, B, C):
 
 
 A1, B1, C1 = r.randint(-50, 50), r.randint(-50, 50), r.randint(-50, 50)
+print(f"Первый набор до сортировки: {A1}, {B1}, {C1}")
 A1, B1, C1 = SortDec3(A1, B1, C1)
 print(f"Первый набор после сортировки: {A1}, {B1}, {C1}")
 
 A2, B2, C2 = r.randint(-50, 50), r.randint(-50, 50), r.randint(-50, 50)
+print(f"Второй набор до сортировки: {A2}, {B2}, {C2}")
 A2, B2, C2 = SortDec3(A2, B2, C2)
 print(f"Второй набор после сортировки: {A2}, {B2}, {C2}")
