@@ -4,17 +4,16 @@
 
 import random as r
 N = int(input("Введите длину списка. Обязательно нечётное! "))
-A = []
-B = []
-for i in range(N):
-    A.append(r.randint(-10, 10))
+if N >= 1:
+    A = []
 
-print(A)
+    for i in range(N):
+        A.append(r.randint(-10, 10))
 
-for i in range(len(A)):
-    B.append(A[i+2])
+    print(f"Список до сортировки по нечётности {A} ")
 
+    A = A[-1::-2]
 
-print(B)
-
-print(len(A))
+    print(f"Список после сортировки по нечётности {A} ")
+else:
+    print("Список слишком короткий!")
