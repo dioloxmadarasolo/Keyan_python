@@ -10,5 +10,3 @@ if N > 0:
     print(str(star.join(A)))
 else:
     print("Введите число больше 0!")
-
-
