@@ -4,16 +4,30 @@
 # ограниченный пробелами, знаками препинания или началом/концом строки.
 
 
-sentence = "строка предложение на русском языке"
+S = "Дана строка-предложение на русском языке."
 
-words = sentence.split()
+# Убираем из строки лишние символы (знаки препинания), кроме пробелов
+A = ""
+for i in S:
+    if i.isalnum() or i.isspace():  # Оставляем буквы, цифры и пробелы
+        A += i
 
-filtered_words = [word.strip(".,!?;:") for word in words]
+# Разделяем предложение на слова
+words = A.split()
 
-lengths = [len(word) for word in filtered_words]
+# Инициализация переменных для минимальной длины и самого короткого слова
+shortest_word = None
+min_length = float('inf')
 
-min_length = min(lengths)
+# Проходим по словам
+for i in words:
+    # Если длина слова меньше или равна текущей минимальной длине
+    if len(i) <= min_length:
+        # Обновляем минимальную длину и сохраняем слово
+        min_length = len(i)
+        shortest_word = i
 
-shortest_index = lengths.index(min_length)
+# Вывод самого короткого слова (последнее при одинаковой длине)
+print("Самое короткое слово:", shortest_word)
 
-print(filtered_words[shortest_index])
+
