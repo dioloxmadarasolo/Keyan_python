@@ -1,7 +1,9 @@
 # В матрице найти сумму и произведение элементов столбца N (N задать с клавиатуры)
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
+
+import random as r
+
+X = int(input("Введите количество строк и столбцов матрицы: "))
+matrix = [[r.randint(1, 100) for i in range(X)] for i in range(X)]
 
 n = int(input("Введите номер столбца (отсчет с 0): "))
 
@@ -14,3 +16,4 @@ for i in matrix:
 
 print(f"Сумма элементов {n}-го столбца: {sum_elements}")
 print(f"Произведение элементов {n}-го столбца: {product_elements}")
+print(matrix)
