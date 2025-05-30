@@ -1,17 +1,16 @@
 # В матрице найти сумму и произведение элементов столбца N (N задать с клавиатуры)
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
 
-matrix = [
-    [42, 55, 10,5],
-    [12, 1, 0, 4],
-    [6, 90, 34, 8]
-]
-N = int(input("Введите номер столбца"))
+n = int(input("Введите номер столбца (отсчет с 0): "))
 
-def matSum(N):
-    for i in range(len(matrix)):
-        b = int(matrix[0][N]+matrix[i][N])
-        print(b)
+sum_elements = 0
+product_elements = 1
 
-matSum(N)
+for i in matrix:
+    sum_elements += i[n]
+    product_elements *= i[n]
 
-print(len(matrix))
+print(f"Сумма элементов {n}-го столбца: {sum_elements}")
+print(f"Произведение элементов {n}-го столбца: {product_elements}")
