@@ -6,7 +6,7 @@
 import random as r
 
 N = int(input("Введите количество чисел в списке: "))
-n = random_list = list(map(lambda _: r.randint(0, 100), range(N)))
+n = random_list = list(map(lambda _: r.randint(-100, 100), range(N)))
 n_new = (list(filter(lambda x: x > 0, n)))
 print(n_new)
 print(len(n_new))
