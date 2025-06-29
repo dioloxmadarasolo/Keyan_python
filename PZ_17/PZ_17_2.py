@@ -19,9 +19,9 @@ def check_even():
     try:
         a = int(entry_a.get())
         if a % 2 == 0:
-            result_even.set("Число A является чётным.")
+            result_even.set(f"Число {a} является чётным.")
         else:
-            result_even.set("Число A не является чётным.")
+            result_even.set(f"Число {a} не является чётным.")
     except ValueError:
         messagebox.showerror("Ошибка", "Введите целое число.")
 
